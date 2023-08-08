@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import '../../../index.css'
 
 export default function HomeBody() {
@@ -11,7 +12,10 @@ export default function HomeBody() {
                 <div className="card-text-subTitle">
                     <p>DevSuperior - Escola de programação</p>
                 </div>
-                <button>Começar</button>
+                <Link to="/profile">
+                    <button>Começar</button>
+                </Link>
+                
             </section>
         </main>
     );

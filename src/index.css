@@ -4,11 +4,12 @@
     --color-white: #FFF;
     --color-blue: #1890FF;
     --color-blue-light: #E6F7FF;
-    
+
     --color-title: #262626;
     --color-subtitle: #7E7E7E;
-    --color-placeholder:#BFBFBF;  
-    --color-border:#D9D9D9;
+    --color-placeholder: #BFBFBF;
+    --color-border: #D9D9D9;
+    --color-card-github: #F5F5F5;
 }
 
 * {
@@ -32,10 +33,12 @@ header {
     font-size: 24px;
     display: flex;
 }
+
 .header-content {
     display: flex;
     align-items: center;
 }
+
 /**-----------------HOME-------------------**/
 .card-text-title {
     color: var(--color-title);
@@ -43,11 +46,13 @@ header {
     font-size: 48px;
     font-weight: 700;
 }
+
 .card-text-subTitle {
     color: var(--color-subtitle);
     font-size: 24px;
     font-weight: 700;
 }
+
 button {
     background-color: var(--color-blue);
     color: var(--color-white);
@@ -56,10 +61,11 @@ button {
     padding: 10px;
     font-size: 16px;
     margin-top: 30px;
+    cursor: pointer;
 }
+
 /**-----------------PROFILE-------------------**/
-.card-profile {
-    max-width: 1250px;
+.card-profile-container {
     background-color: var(--color-blue-light);
     color: var(--color-title);
     font-size: 38px;
@@ -68,6 +74,7 @@ button {
     padding: 40px 20px;
     border-radius: 16px;
 }
+
 .card-profile-input {
     padding: 10px;
     margin-top: 10px;
@@ -79,4 +86,48 @@ button {
 
 input::placeholder {
     color: var(--color-placeholder);
+}
+
+/**-----------------GITHUB-------------------**/
+.card-github-container {
+    background-color: var(--color-card-github);
+    margin: 55px 100px 125px 90px;
+    border-radius: 8px;
+    display: flex;
+}
+
+.github-photo img {
+    width: 247px;
+    height: 247px;
+    margin: 45px 15px 40px 40px;
+}
+
+.card-github-info {
+    background-color: var(--color-white);
+    margin: 45px 35px 45px 15px;
+    width: 100%;
+    padding: 10px 15px 15px 15px;
+    border-radius: 6px;
+    border: 1px solid var(--color-border);
+}
+
+.card-github-info p {
+    margin-bottom: 20px;
+    color: var(--color-blue);
+    font-weight: 500;
+}
+
+.card-github-info-box {
+    border-radius: 4px;
+    border: 1px solid var(--color-border);
+    background: var(--grey-grey-1, #FFF);
+    height: 40px;
+    margin-bottom: 5px;
+}
+/**-----------------NOTFOUND-------------------**/
+.profile-find-error {
+    margin: 55px;
+    font-weight: 500;
+    font-size: 38px;
+    color: var(--color-title);
 }
