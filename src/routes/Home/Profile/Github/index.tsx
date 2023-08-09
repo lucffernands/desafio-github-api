@@ -15,7 +15,7 @@ export default function Github() {
                             <p>Informações</p>
                         </div>
                         <div className="card-github-info-box">
-                            
+                            <p>Perfil:</p>
                         </div>
                         <div className="card-github-info-box">
                             
