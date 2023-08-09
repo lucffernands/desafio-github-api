@@ -64,8 +64,8 @@ button {
     cursor: pointer;
 }
 
-/**-----------------PROFILE-------------------**/
-.card-profile-container {
+/**-----------------SEARCH-------------------**/
+.card-search-container {
     background-color: var(--color-blue-light);
     color: var(--color-title);
     font-size: 38px;
@@ -75,7 +75,7 @@ button {
     border-radius: 16px;
 }
 
-.card-profile-input {
+.card-search-input {
     padding: 10px;
     margin-top: 10px;
     width: 298px;
@@ -88,21 +88,21 @@ input::placeholder {
     color: var(--color-placeholder);
 }
 
-/**-----------------GITHUB-------------------**/
-.card-github-container {
+/**-----------------PROFILE-------------------**/
+.card-profile-container {
     background-color: var(--color-card-github);
     margin: 55px 100px 125px 90px;
     border-radius: 8px;
     display: flex;
 }
 
-.github-photo img {
+.card-profile-photo img {
     width: 247px;
     height: 247px;
     margin: 45px 15px 40px 40px;
 }
 
-.card-github-info {
+.card-profile-info {
     background-color: var(--color-white);
     margin: 45px 35px 45px 15px;
     width: 100%;
@@ -111,13 +111,13 @@ input::placeholder {
     border: 1px solid var(--color-border);
 }
 
-.card-github-info p {
+.card-profile-info p {
     margin-bottom: 20px;
     color: var(--color-blue);
     font-weight: 500;
 }
 
-.card-github-info-box {
+.card-profile-info-box {
     border-radius: 4px;
     border: 1px solid var(--color-border);
     background: var(--grey-grey-1, #FFF);
