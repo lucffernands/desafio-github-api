@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./routes/Home";
 import HomeBody from "./routes/Home/HomeBody";
-import Profile from "./routes/Home/Profile";
+import ProfileSearch from "./routes/Home/ProfileSeach";
 
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} >
           <Route index element={<HomeBody />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/profile-search" element={<ProfileSearch />} />
         </Route>
       </Routes>
     </BrowserRouter>

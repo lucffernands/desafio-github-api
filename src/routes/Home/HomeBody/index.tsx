@@ -1,5 +1,6 @@
-import { Link } from 'react-router-dom';
 import '../../../index.css'
+import Button from '../../../components/Button';
+import { NavLink } from 'react-router-dom';
 
 export default function HomeBody() {
 
@@ -12,10 +13,9 @@ export default function HomeBody() {
                 <div className="card-text-subTitle">
                     <p>DevSuperior - Escola de programação</p>
                 </div>
-                <Link to="/profile">
-                    <button>Começar</button>
-                </Link>
-                
+                <NavLink to="/profile-search">
+                    <Button Title="Começar" />
+                </NavLink>     
             </section>
         </main>
     );

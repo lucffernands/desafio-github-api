@@ -25,7 +25,7 @@
     padding-left: 40px;
 }
 
-/**---------------HEADER----------------**/
+/**-------------COMPONENTS----------------**/
 header {
     background-color: var(--color-blue);
     color: var(--color-white);
@@ -37,6 +37,19 @@ header {
 .header-content {
     display: flex;
     align-items: center;
+}
+
+#button-blue {
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    width: 100px;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid var(--color-blue);
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    margin-top: 30px;
 }
 
 /**-----------------HOME-------------------**/
@@ -53,19 +66,8 @@ header {
     font-weight: 700;
 }
 
-button {
-    background-color: var(--color-blue);
-    color: var(--color-white);
-    border: none;
-    border-radius: 4px;
-    padding: 10px;
-    font-size: 16px;
-    margin-top: 30px;
-    cursor: pointer;
-}
-
-/**-----------------SEARCH-------------------**/
-.card-search-container {
+/**-----------------PROFILE-SEARCH-------------------**/
+#card-search-container {
     background-color: var(--color-blue-light);
     color: var(--color-title);
     font-size: 38px;
@@ -88,7 +90,8 @@ input::placeholder {
     color: var(--color-placeholder);
 }
 
-/**-----------------PROFILE-------------------**/
+/**-----------------PROFILE-GITHUB-------------------**/
+
 .card-profile-container {
     background-color: var(--color-card-github);
     margin: 55px 100px 125px 90px;
@@ -124,8 +127,9 @@ input::placeholder {
     height: 40px;
     margin-bottom: 5px;
 }
+
 /**-----------------NOTFOUND-------------------**/
-.profile-find-error {
+.no-response {
     margin: 55px;
     font-weight: 500;
     font-size: 38px;
