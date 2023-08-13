@@ -14,20 +14,20 @@ export default function ProfileResponse({ profile }: Props) {
                     <img src={profile.avatar} alt="foto-perfil" />
                 </div>
                 <div className="card-profile-info">
-                    <div>
+                    <div className="card-profile-info-title">
                         <p>Informações</p>
                     </div>
                     <div className="card-profile-info-box">
-                        <p>Perfil: {profile.url}</p>
+                    <p>Perfil: <span className="font-regular font-blue">{profile.url}</span></p>
                     </div>
                     <div className="card-profile-info-box">
-                        <p>Seguidores: {profile.followers}</p>
+                    <p>Seguidores: <span className="font-regular">{profile.followers}</span></p>
                     </div>
                     <div className="card-profile-info-box">
-                        <p>Localidade: {profile.location}</p>
+                    <p>Localidade: <span className="font-regular">{profile.location}</span></p>
                     </div>
                     <div className="card-profile-info-box">
-                        <p>Nome: {profile.name}</p>
+                        <p>Nome: <span className="font-regular">{profile.name}</span></p>
                     </div>
                 </div>
             </div>

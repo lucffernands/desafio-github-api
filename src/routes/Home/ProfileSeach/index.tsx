@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import '../../../index.css';
-import { NavLink } from "react-router-dom";
 import Button from "../../../components/Button";
 import { ProfileDTO } from "../../../models/Profile/Profile";
 import axios from "axios";
@@ -13,15 +12,13 @@ type FormData = {
 
 export default function ProfileSearch() {
 
-    const uri = 'https://api.github.com/users/';
-
     const [formData, setFormData] = useState<FormData>({
         user: ''
     });
 
     const [conditions, setConditions] = useState({
         showResponse: false,
-        notFound: false
+        responseNone: false
     });
 
     const [click, setClick] = useState(0);
@@ -51,10 +48,9 @@ export default function ProfileSearch() {
 
     useEffect(() => {
         if (formData.user != '')
-            axios.get(uri + formData.user)
+            axios.get(`https://api.github.com/users/${formData.user}`)
                 .then(response => {
-                    console.log(response.data);
-                    setConditions({ ...conditions, notFound: false });
+                    setConditions({ ...conditions, responseNone: false });
                     setProfile({
                         avatar: response.data.avatar_url,
                         url: response.data.url,
@@ -62,7 +58,7 @@ export default function ProfileSearch() {
                         location: response.data.location,
                         name: response.data.name
                     });
-                }).catch(() => setConditions({ ...conditions, notFound: true }));
+                }).catch(() => setConditions({ ...conditions, responseNone: true }));
     }, [click]);
 
     return (
@@ -91,7 +87,7 @@ export default function ProfileSearch() {
                 {
                     !conditions.showResponse
                         ? (<></>)
-                        : conditions.notFound
+                        : conditions.responseNone
                             ? (<ProfileNotFound />)
                             : (<ProfileResponse profile={profile} />)
                 }
